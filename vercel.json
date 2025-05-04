@@ -1,23 +1,14 @@
 {
   "builds": [
     {
-      "src": "main.py",
-      "use": "@vercel/python",
-      "config": { 
-        "maxLambdaSize": "15mb",  
-        "includeFiles": ["**/*.py", "requirements.txt"] 
-      }
+      "src": "api/*.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "main.py",
-      "methods": ["GET", "POST", "OPTIONS"] 
-    },
-    {
-      "src": "/(.*)", 
-      "dest": "main.py"
+      "dest": "api/login.py"
     }
   ]
 }
