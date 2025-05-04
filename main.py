@@ -15,4 +15,4 @@ def handle_login():
         return jsonify({"success": False, "error": "认证失败"}), 401
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 3000)))
