@@ -1,3 +1,5 @@
+# requirements.txt
 Flask==2.0.3
 Werkzeug==2.0.3
-python-dotenv==0.19.0  # 可选，用于本地环境变量加载
+python-dotenv==0.19.0  
+gunicorn==20.1.0   
