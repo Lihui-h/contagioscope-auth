@@ -1,14 +1,9 @@
 {
-  "builds": [
-    {
-      "src": "api/*.py",
-      "use": "@vercel/python"
-    }
-  ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "api/login.py"
+      "dest": "/api/$1",
+      "methods": ["POST", "OPTIONS"]
     }
   ]
 }
