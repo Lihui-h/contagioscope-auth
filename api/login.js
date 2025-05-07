@@ -1,6 +1,6 @@
-const { VercelRequest, VercelResponse } = require('@vercel/node');
+const { createApiHandler } = require('@vercel/node');
 
-module.exports = (req, res) => {
+module.exports = createApiHandler(async (req, res) => {
   // CORS配置
   res.setHeader('Access-Control-Allow-Origin', 'https://lihui-h.github.io');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -31,4 +31,4 @@ module.exports = (req, res) => {
   }
 
   return res.status(405).end(); // Method Not Allowed
-};
+});
